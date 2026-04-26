@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Stil pentru butoanele din grila de joc */
+QPushButton {
+    background-color: #ffffff;
+	color:  #000000;
+    border: 2px solid #bdc3c7;
+    border-radius: 10px;
+    font-size: 26px;
+    font-weight: bold;
+    min-width: 100px;
+    min-height: 100px;
+}
+
+QPushButton:hover {
+    background-color: #ecf0f1;
+}
+
+QPushButton:disabled {
+    background-color: #f8f9fa;
+    color: #2c3e50; /* Culoarea textului după ce a fost pus X sau 0 */
+}
+
+/* Stil pentru eticheta de status */
+QLabel#label_status {
+    color: #2980b9;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* Stil pentru scor */
+QLabel#label_score {
+    font-size: 24px;
+    color: #e74c3c;
+    font-weight: bold;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>20</y>
+      <width>801</width>
+      <height>116</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="status">
+       <property name="text">
+        <string>Asteptare adversar...</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="p1">
+       <property name="text">
+        <string>Nume</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="p2">
+       <property name="text">
+        <string>Nume adeversar</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="score">
+       <property name="text">
+        <string>Scor</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lastGame">
+       <property name="text">
+        <string>Ultimul joc</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>170</y>
+      <width>426</width>
+      <height>316</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0,0,0,0,0,0">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <item row="7" column="0">
+        <widget class="QPushButton" name="btn6">
+         <property name="minimumSize">
+          <size>
+           <width>104</width>
+           <height>104</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="btn2">
+         <property name="minimumSize">
+          <size>
+           <width>104</width>
+           <height>104</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="btn1">
+         <property name="minimumSize">
+          <size>
+           <width>104</width>
+           <height>104</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <widget class="QPushButton" name="btn7">
+         <property name="minimumSize">
+          <size>
+           <width>104</width>
+           <height>104</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QPushButton" name="btn0">
+         <property name="minimumSize">
+          <size>
+           <width>104</width>
+           <height>104</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="2">
+        <widget class="QPushButton" name="btn8">
+         <property name="minimumSize">
+          <size>
+           <width>104</width>
+           <height>104</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QPushButton" name="btn3">
+         <property name="minimumSize">
+          <size>
+           <width>104</width>
+           <height>104</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="2">
+        <widget class="QPushButton" name="btn5">
+         <property name="minimumSize">
+          <size>
+           <width>104</width>
+           <height>104</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QPushButton" name="btn4">
+         <property name="minimumSize">
+          <size>
+           <width>104</width>
+           <height>104</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>30</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
